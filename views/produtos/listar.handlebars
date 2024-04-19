@@ -1,0 +1,23 @@
+<h1 class="text-center my-3">Lista de Produtos</h1>
+<table class="table">
+  <div class="row">
+    <div class="col-12">
+     <thead>
+      </thead>
+      <tbody>
+        <tr>
+          {{#each produto}}
+          <th><center><img src="{{this.link}}" alt="mostrar imagem" width=150 height=150><br> <strong>{{this.nome}}</strong><br>
+              {{this.descricao}}<br>
+              R${{this.preco}} <br>
+              cod. Produto:{{this.id_produto}}<br>
+     <a href="/carrinho/Adicionar/{{this.id_produto}}/{{this.nome}}">
+            <img src="https://cdn-icons-png.flaticon.com/512/5412/5412611.png" width=40 height=40 alt="mostrar imagem" /></a>
+         
+          </th>
+          {{/each}}
+        </tr>
+      </tbody>
+    </div>
+  </div>
+</table>
